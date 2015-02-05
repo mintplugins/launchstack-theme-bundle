@@ -18,15 +18,12 @@ A bundle of Stack Templates, Plugins, a Theme, and everything needed for the Lau
 
 This section describes how to install the plugin and get it working.
 
-1. Upload the 'mp-stacks-‘parallax folder to the `/wp-content/plugins/` directory
+1. Upload the ‘launchstack-theme-bundle’ folder to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Build Bricks under the “Stacks and Bricks” menu. 
-4. Publish your bricks into a “Stack”.
-5. Put Stacks on pages using the shortcode or the “Add Stack” button.
 
 == Frequently Asked Questions ==
 
-See full instructions at http://mintplugins.com/doc/mp-stacks
+See full instructions at http://mintplugins.com/doc/launchstack-theme-bundle
 
 == Screenshots ==
 
