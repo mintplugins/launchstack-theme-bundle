@@ -819,7 +819,7 @@ else{
             ),
             'brick_text_line_1' => 
             array (
-              'value' => '&lt;p&gt;[mp_button icon=&quot;fa-play&quot; text=&quot;Watch Video&quot; link=&quot;https://www.youtube.com/watch?v=OtREUajBwIQ&quot; color=&quot;&quot; text_color=&quot;&quot; hover_color=&quot;&quot; hover_text_color=&quot;&quot; open_type=&quot;lightbox&quot; lightbox_width=&quot;640&quot; lightbox_height=&quot;360&quot;]&lt;/p&gt;
+              'value' => '&lt;p&gt;[mp_button icon=&quot;fa-play&quot; text=&quot;Watch Video&quot; link=&quot;https://www.youtube.com/watch?v=iaHjj4z-1uw&quot; color=&quot;&quot; text_color=&quot;&quot; hover_color=&quot;&quot; hover_text_color=&quot;&quot; open_type=&quot;lightbox&quot; lightbox_width=&quot;640&quot; lightbox_height=&quot;360&quot;]&lt;/p&gt;
 &lt;p&gt;[mp_button icon=&quot;fa-rocket&quot; text=&quot;Back on Kickstarter&quot; link=&quot;https://www.kickstarter.com/projects/elanlee/exploding-kittens&quot; color=&quot;&quot; text_color=&quot;&quot; hover_color=&quot;&quot; hover_text_color=&quot;&quot; open_type=&quot;lightbox&quot; lightbox_width=&quot;800&quot; lightbox_height=&quot;800&quot;]&lt;/p&gt;
 ',
               'attachment' => false,
@@ -1581,7 +1581,7 @@ else{
             ),
             'brick_text' => 
             array (
-              'value' => '&lt;p&gt;[mp_button icon=&quot;fa-play&quot; text=&quot;Watch Video&quot; link=&quot;https://www.youtube.com/watch?v=OtREUajBwIQ&quot; color=&quot;&quot; text_color=&quot;&quot; hover_color=&quot;&quot; hover_text_color=&quot;&quot; open_type=&quot;lightbox&quot; lightbox_width=&quot;640&quot; lightbox_height=&quot;360&quot;]&lt;/p&gt;
+              'value' => '&lt;p&gt;[mp_button icon=&quot;fa-play&quot; text=&quot;Watch Video&quot; link=&quot;https://www.youtube.com/watch?v=iaHjj4z-1uw&quot; color=&quot;&quot; text_color=&quot;&quot; hover_color=&quot;&quot; hover_text_color=&quot;&quot; open_type=&quot;lightbox&quot; lightbox_width=&quot;640&quot; lightbox_height=&quot;360&quot;]&lt;/p&gt;
 ',
               'attachment' => false,
             ),
@@ -7400,11 +7400,11 @@ else{
       ),
       'mailchimp_api_key' => 
       array (
-        'value' => '7f2d54dbee4e6b632a7a3bac7d479e41-us8',
+        'value' => '',
       ),
       'mailchimp_list_id' => 
       array (
-        'value' => '88f705bd2e',
+        'value' => '',
       ),
       'brick_second_video_url' => 
       array (
@@ -10308,21 +10308,9 @@ else{
       array (
         'value' => '',
       ),
-      'postgrid_title_spacing' => 
-      array (
-        'value' => '0',
-      ),
       'postgrid_date_format' => 
       array (
         'value' => '',
-      ),
-      'postgrid_date_spacing' => 
-      array (
-        'value' => '0',
-      ),
-      'postgrid_excerpt_spacing' => 
-      array (
-        'value' => '0',
       ),
       'brick_ct1_dropshadow_showhider' => 
       array (

@@ -122,10 +122,14 @@ function launchstack_theme_bundle_custom_installation_settings( $context ){
 	
 	global $mp_core_options;
 	
+	if ( !function_exists('mp_core_textdomain') ){
+		return;	
+	}
+	
 	//If we should ask the user to choose whether to use the Theme Bundle's customizer or their existing Customizer		
 	if ( isset( $mp_core_options['ask_user_to_set_customizer_options'] ) && $mp_core_options['ask_user_to_set_customizer_options'] == true && !isset( $_GET['use_launchstack_customizer'] ) ){
 						
-		//Set up the html form we'll show to the user so they can enter their license
+		//Set up the html form we'll show to the user so they can choose their customizer style
 		$page_body_html = 
 		'<h3>' . __( 'Set-Up Question:') . '</h3>
 		<p>' . __( 'Do you want to set the WordPress <strong>"Customizer"</strong> options to match <strong>Launchstack</strong> or keep them as-is?', 'launchstack_theme_bundle' ) . '</p>

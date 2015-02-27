@@ -3905,21 +3905,9 @@ and show a Post Categories in Grids.&lt;/p&gt;
       array (
         'value' => '',
       ),
-      'postgrid_title_spacing' => 
-      array (
-        'value' => '0',
-      ),
       'postgrid_date_format' => 
       array (
         'value' => '',
-      ),
-      'postgrid_date_spacing' => 
-      array (
-        'value' => '0',
-      ),
-      'postgrid_excerpt_spacing' => 
-      array (
-        'value' => '0',
       ),
       'brick_ct1_dropshadow_showhider' => 
       array (

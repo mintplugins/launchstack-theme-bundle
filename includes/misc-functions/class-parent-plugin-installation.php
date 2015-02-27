@@ -29,7 +29,11 @@ function mp_core_global_options_init(){
 	global $mp_core_options;
 	
 	$mp_core_options = get_option('mp_core_options');
-		
+	
+	if( !session_id() ){
+		session_start();
+	}
+			
 }
 
 /**
@@ -141,7 +145,12 @@ class MP_CORE_Licensed_Parent_Plugin_Installation_Routine{
 				//Save our mp_core_options - since we've just activated and changed some of them
 				update_option( 'mp_core_options', $mp_core_options );
 				
-				wp_redirect( admin_url() );	
+				//wp_redirect( admin_url() );	
+				
+				// Redirect the user to Parent Plugin's Welcome Page
+				echo '<script type="text/javascript">';
+					echo "window.location = '" . admin_url() . "';";
+				echo '</script>';
 				exit();
 			
 			}
@@ -287,10 +296,7 @@ class MP_CORE_Licensed_Parent_Plugin_Installation_Routine{
 	 */
 	function footer_redirects_after_dependant_installs(){
 		global $mp_core_options;
-		
-		if( !session_id() )
-        session_start();
-				
+						
 		//If we are installing dependant plugins, once they are all installed tell parent_plugin_activation_status that we are complete
 		if( $mp_core_options['parent_plugin_activation_status'] == 'installing_dependencies' ){
 			
