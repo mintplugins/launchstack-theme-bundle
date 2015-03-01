@@ -284,7 +284,7 @@ function launchsstack_theme_bundle_customizer_undo(){
 		?><div class="updated">
 			<p>
 				<strong><?php echo __( 'Launchstack Theme Bundle Message:', 'launchstack_theme_bundle' ); ?></strong>
-				<?php echo __( 'We have backed up your previous "Appearance" > "Customizer" options for 24 hours in case you change your mind. If you\'d like to revert your Customizer back to the way it was before you activated the Launchstack Theme Bundle,', 'launchstack_theme_bundle' ); ?> <a href="<?php echo add_query_arg( array( 'mp_revert_customizer' => true, 'mp_revert_customizer_context' => 'launchstack_theme_bundle' ), admin_url() ); ?>"><?php echo __( 'Click Here', 'launchstack_theme_bundle' ); ?></a> | <a href="<?php echo add_query_arg( array( 'mp_revert_customizer' => 0, 'mp_revert_customizer_context' => 'launchstack_theme_bundle' ), mp_core_get_current_url() ); ?>"><?php echo __( 'Dismiss this message', 'launchstack_theme_bundle' ); ?></a>
+				<?php echo __( 'We have backed up your previous "Appearance" > "Customizer" options for 24 hours in case you change your mind. If you\'d like to revert your Customizer back to the way it was before you activated the Launchstack Theme Bundle,', 'launchstack_theme_bundle' ); ?> <a href="<?php echo add_query_arg( array( 'mp_revert_customizer' => true, 'mp_revert_customizer_context' => 'launchstack_theme_bundle' ), admin_url() ); ?>"><?php echo __( 'Click Here to Revert.', 'launchstack_theme_bundle' ); ?></a> | <a href="<?php echo add_query_arg( array( 'mp_revert_customizer' => 0, 'mp_revert_customizer_context' => 'launchstack_theme_bundle' ), mp_core_get_current_url() ); ?>"><?php echo __( 'Dismiss old Customizer.', 'launchstack_theme_bundle' ); ?></a>
 			</p>
 		  </div><?php
 	  
