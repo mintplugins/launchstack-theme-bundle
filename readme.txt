@@ -30,5 +30,5 @@ See full instructions at http://mintplugins.com/doc/launchstack-theme-bundle
 
 == Changelog ==
 
-= 1.0.0.0 = February X, 2014
+= 1.0.0.0 = March 1, 2015
 * Original release
