@@ -4,7 +4,7 @@ Donate link: http://mintplugins.com/
 Tags: page, builder, stacks, bricks
 Requires at least: 3.5
 Tested up to: 4.1
-Stable tag: 1.0.0.1
+Stable tag: 1.0.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,11 @@ See full instructions at http://mintplugins.com/doc/launchstack-theme-bundle
 
 
 == Changelog ==
+
+= 1.0.0.2 = March 2, 2015
+* Make sure default pages get set up even if the user decides to keep their current customizer.
+* Better Homepage Preview video (now uses setup tutorial)
+* Removed old launchstack-homepage template (replaced with launchstack-home)
 
 = 1.0.0.1 = March 1, 2015
 * Change some stack template titles
