@@ -4,7 +4,7 @@ Donate link: http://mintplugins.com/
 Tags: page, builder, stacks, bricks
 Requires at least: 3.5
 Tested up to: 4.1
-Stable tag: 1.0.0.0
+Stable tag: 1.0.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,13 @@ See full instructions at http://mintplugins.com/doc/launchstack-theme-bundle
 
 
 == Changelog ==
+
+= 1.0.0.1 = March 1, 2015
+* Change some stack template titles
+* Blog Archive -> Blog
+* EDD Download -> EDD Product
+* EDD Archive -> EDD Store
+
 
 = 1.0.0.0 = March 1, 2015
 * Original release
