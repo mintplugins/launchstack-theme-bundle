@@ -173,8 +173,13 @@ function launchstack_theme_bundle_custom_installation_settings( $context ){
 		$mp_core_options['ask_user_to_set_customizer_options'] = false;
 		update_option( 'mp_core_options', $mp_core_options );
 				
-		//If we should keep the Old Theme Mods, get out of here.
+		//If we should keep the Old Theme Mods
 		if ( !$_GET['use_launchstack_customizer'] ){
+			
+			//Set up the default Stacks and corresponsing posts
+			mp_stacks_theme_bundle_create_default_pages( 'launchstack_theme_bundle' );
+			
+			//Then get out of here.
 			return false;	
 		}
 		
