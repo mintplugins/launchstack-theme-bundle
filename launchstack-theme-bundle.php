@@ -183,7 +183,7 @@ function launchstack_theme_bundle_include_files(){
 			/**
 			 *  HomePage Stack
 			 */
-			require( LAUNCHSTACK_THEME_BUNDLE_PLUGIN_DIR . 'includes/stack-templates/launchstack-homepage/launchstack-homepage.php' );
+			require( LAUNCHSTACK_THEME_BUNDLE_PLUGIN_DIR . 'includes/stack-templates/launchstack-home/launchstack-home.php' );
 			
 			/**
 			 *  Footer Stack
@@ -193,12 +193,12 @@ function launchstack_theme_bundle_include_files(){
 			/**
 			 *  Launchstack Download Archive 
 			 */
-			require( LAUNCHSTACK_THEME_BUNDLE_PLUGIN_DIR . 'includes/stack-templates/launchstack-edd-archive/launchstack-edd-archive.php' );
+			require( LAUNCHSTACK_THEME_BUNDLE_PLUGIN_DIR . 'includes/stack-templates/launchstack-edd-store/launchstack-edd-store.php' );
 			
 			/**
 			 *  Download Product Template
 			 */
-			require( LAUNCHSTACK_THEME_BUNDLE_PLUGIN_DIR . 'includes/stack-templates/launchstack-edd-download/launchstack-edd-download.php' );
+			require( LAUNCHSTACK_THEME_BUNDLE_PLUGIN_DIR . 'includes/stack-templates/launchstack-edd-product/launchstack-edd-product.php' );
 			
 			/**
 			 *  Launchstack About Us
@@ -213,7 +213,7 @@ function launchstack_theme_bundle_include_files(){
 			/**
 			 *  Launchstack Blog Archive
 			 */
-			require( LAUNCHSTACK_THEME_BUNDLE_PLUGIN_DIR . 'includes/stack-templates/launchstack-blog-archive/launchstack-blog-archive.php' );
+			require( LAUNCHSTACK_THEME_BUNDLE_PLUGIN_DIR . 'includes/stack-templates/launchstack-blog/launchstack-blog.php' );
 			
 			/**
 			 *  Launchstack Blog Template

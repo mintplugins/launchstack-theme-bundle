@@ -133,9 +133,9 @@ else{
 			'template_slug' => 'launchstack_about_us',
 			'template_title' => __( 'About Us', 'launchstack_theme_bundle' ),
 			'template_description' => __('Launchstack\'s "About Us" Stack.', 'launchstack_theme_bundle' ),
-			'template_tags' => 'Launchstack, About',
+			'template_tags' => 'About Us, Launchstack',
 			'template_preview_img' => $url_path . '/images/preview_thumbnail.jpg',
-			'template_demo_url' => 'http://demo.mintplugins.com/launchstack-theme-bundle/launchstack-about-us/',
+			'template_demo_url' => 'https://demo.mintplugins.com/launchstack-theme-bundle/about-us/',
 		);
 		
 		return $installed_templates;
@@ -5492,7 +5492,7 @@ else{
       'mp_stack_order' => 1030,
       '_edit_lock' => 
       array (
-        'value' => '1422912575:3',
+        'value' => '1424651914:3',
       ),
       '_edit_last' => 
       array (
@@ -7481,6 +7481,113 @@ else{
       'brick_ct2_shadow_opacity' => 
       array (
         'value' => '100',
+      ),
+      'downloadgrid_bg_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'backgroundColorAlpha' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'backgroundColor' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'postgrid_taxonomy_terms' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'taxonomy_term' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'taxonomy_bg_color' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+          ),
+        ),
+      ),
+      'postgrid_bg_animation_keyframes' => 
+      array (
+        'value' => 
+        array (
+          0 => 
+          array (
+            'animation_length' => 
+            array (
+              'value' => '500',
+              'attachment' => false,
+            ),
+            'backgroundColor' => 
+            array (
+              'value' => '',
+              'attachment' => false,
+            ),
+            'backgroundColorAlpha' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+            'rotateZ' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateX' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'translateY' => 
+            array (
+              'value' => '0',
+              'attachment' => false,
+            ),
+            'scale' => 
+            array (
+              'value' => '100',
+              'attachment' => false,
+            ),
+          ),
+        ),
       ),
     ),
     'brick_5' => 
