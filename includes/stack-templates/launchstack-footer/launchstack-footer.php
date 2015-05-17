@@ -187,6 +187,10 @@ else{
       array (
         'value' => '3',
       ),
+	  'mp_stacks_widgets_brick_sidebar_id' => 
+	  array(
+	  	'value' => 'mp_stacks_widgets_sidebar_id_' . time(),
+	  ),
       'gallery_source' => 
       array (
         'value' => '',
