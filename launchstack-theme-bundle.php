@@ -3,7 +3,7 @@
 Plugin Name: Launchstack Theme Bundle
 Plugin URI: https://mintplugins.com
 Description: A bundle of Stack Templates, Plugins, a Theme, and everything needed for the Launchstack Theme Experience.
-Version: 1.0.0.3
+Version: 1.0.0.4
 Author: Mint Plugins
 Author URI: http://mintplugins.com
 Text Domain: launchstack_theme_bundle
@@ -11,7 +11,7 @@ Domain Path: languages
 License: GPL2
 */
 
-/*  Copyright 2014  Phil Johnston  (email : phil@mintplugins.com)
+/*  Copyright 2015  Phil Johnston  (email : phil@mintplugins.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 
@@ -34,7 +34,7 @@ License: GPL2
 */
 // Plugin version
 if( !defined( 'LAUNCHSTACK_THEME_BUNDLE_VERSION' ) )
-	define( 'LAUNCHSTACK_THEME_BUNDLE_VERSION', '1.0.0.3' );
+	define( 'LAUNCHSTACK_THEME_BUNDLE_VERSION', '1.0.0.4' );
 
 // Plugin Folder URL
 if( !defined( 'LAUNCHSTACK_THEME_BUNDLE_PLUGIN_URL' ) )
