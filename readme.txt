@@ -3,8 +3,8 @@ Contributors: johnstonphilip
 Donate link: http://mintplugins.com/
 Tags: page, builder, stacks, bricks
 Requires at least: 3.5
-Tested up to: 4.1
-Stable tag: 1.0.0.4
+Tested up to: 4.3
+Stable tag: 1.0.0.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,9 @@ See full instructions at http://mintplugins.com/doc/launchstack-theme-bundle
 
 == Changelog ==
 
+= 1.0.0.5 = September 21, 2015
+* Added check for "allow_url_fopen" before install
+* Bring Plugin Installer up to date with MP Core 1.0.2.1
 
 = 1.0.0.4 = May 17, 2015
 * Bring plugin checker files up to date with MP Core.
