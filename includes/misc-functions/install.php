@@ -37,6 +37,14 @@ require( LAUNCHSTACK_THEME_BUNDLE_PLUGIN_DIR . 'includes/misc-functions/class-pa
 function launchstack_theme_bundle_install() {
 	global $wpdb, $mp_core_options, $wp_version;
 	
+	//For people with poor/bad server configurations which don't have access to allow_url_fopen, output an error message so they know to follow up with their webhost.
+	if( !ini_get('allow_url_fopen') ) {
+		
+		echo __( 'Oops! Your Web Host is badly configured! Let your web host know they need to have "allow_url_fopen" turned on.', 'mp_core' );
+		
+		return false;
+	}
+	
 	//Tell the mp_stacks_options that we just activated a stack pack
 	$mp_core_options['parent_plugin_activation_status'] = 'just_activated';
 	$mp_core_options['ask_user_to_set_customizer_options'] = false;
