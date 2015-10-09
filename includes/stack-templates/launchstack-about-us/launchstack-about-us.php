@@ -134,7 +134,7 @@ else{
 			'template_title' => __( 'About Us', 'launchstack_theme_bundle' ),
 			'template_description' => __('Launchstack\'s "About Us" Stack.', 'launchstack_theme_bundle' ),
 			'template_tags' => 'About Us, Launchstack',
-			'template_preview_img' => $url_path . '/images/preview_thumbnail.jpg',
+			'template_preview_img' => plugins_url( '/images/preview_thumbnail.jpg', __FILE__ ),
 			'template_demo_url' => 'https://demo.mintplugins.com/launchstack-theme-bundle/about-us/',
 		);
 		

@@ -134,7 +134,7 @@ else{
 			'template_title' => __( 'Home', 'launchstack_theme_bundle' ),
 			'template_description' => __('Launchstack\'s "Home" Stack.', 'launchstack_theme_bundle' ),
 			'template_tags' => 'Home, Launchstack',
-			'template_preview_img' => $url_path . '/images/preview_thumbnail.jpg',
+			'template_preview_img' => plugins_url( '/images/preview_thumbnail.jpg', __FILE__ ),
 			'template_demo_url' => 'http://demo.mintplugins.com/launchstack-theme-bundle/',
 		);
 		

@@ -134,7 +134,7 @@ else{
 			'template_title' => __( 'Contact Us', 'launchstack_theme_bundle' ),
 			'template_description' => __('Launchstack\'s "Contact Us" Stack.', 'launchstack_theme_bundle' ),
 			'template_tags' => 'Launchstack, Contact',
-			'template_preview_img' => $url_path . '/images/preview_thumbnail.jpg',
+			'template_preview_img' => plugins_url( '/images/preview_thumbnail.jpg', __FILE__ ),
 			'template_demo_url' => 'http://demo.mintplugins.com/launchstack-theme-bundle/launchstack-contact-us/',
 		);
 		
