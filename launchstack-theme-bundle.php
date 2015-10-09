@@ -94,7 +94,7 @@ add_action( 'init', 'launchstack_theme_bundle_textdomain', 1 );
 /**
  * Activation Hook Function - Gets Stack Pack License, Redirects to installation of dependencies, saves Theme MetaData.
  */
-require( LAUNCHSTACK_THEME_BUNDLE_PLUGIN_DIR . 'includes/misc-functions/install.php' );
+require( LAUNCHSTACK_THEME_BUNDLE_PLUGIN_DIR . 'includes/misc-functions/standard-install-functions.php' );
 
 /*
 |--------------------------------------------------------------------------
@@ -270,6 +270,7 @@ function launchstack_theme_bundle_dependencies_array(){
 		'mp_knapstack_textdomain' => 'mp-knapstack-check.php',
 		'mp_menu_textdomain' => 'mp-menu-check.php',
 		'mp_buttons_textdomain' => 'mp-buttons-check.php',
+		'mp_customizer_backups_textdomain' => 'mp-customizer-backups-check.php',
 		'EDD' => 'edd-check.php',
 		
 		//Pasted from Stack Template's Utility File:
