@@ -4,7 +4,7 @@ Donate link: http://mintplugins.com/
 Tags: page, builder, stacks, bricks
 Requires at least: 3.5
 Tested up to: 4.3
-Stable tag: 1.0.0.5
+Stable tag: 1.0.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,11 @@ See full instructions at http://mintplugins.com/doc/launchstack-theme-bundle
 
 
 == Changelog ==
+
+= 1.0.0.6 = October 8, 2015
+* Changed Template Preview image path to use plugins_url
+* Separated installation functions between standardized and custom and removed on install.php file which is replaced by standard-installfunctions.php and custom-install-functions.php
+* Added call to mp-customizer-backups plugin and do backup upon install of theme mods automatically. It no longer asks the user to do this.
 
 = 1.0.0.5 = September 21, 2015
 * Added check for "allow_url_fopen" before install
