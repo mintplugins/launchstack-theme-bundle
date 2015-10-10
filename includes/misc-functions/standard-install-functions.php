@@ -175,6 +175,7 @@ function launchstack_theme_bundle_switch_theme_workaround(){
 	
 		//Send us back to the admin and away from this error page - before the error page has a chance to show it's ugly face.
 		wp_redirect( admin_url() );
+		exit;
 	}
 }
 add_action( 'wp_die_handler', 'launchstack_theme_bundle_switch_theme_workaround' );
