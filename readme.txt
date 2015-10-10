@@ -4,7 +4,7 @@ Donate link: http://mintplugins.com/
 Tags: page, builder, stacks, bricks
 Requires at least: 3.5
 Tested up to: 4.3
-Stable tag: 1.0.0.6
+Stable tag: 1.0.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,10 @@ See full instructions at http://mintplugins.com/doc/launchstack-theme-bundle
 
 
 == Changelog ==
+
+= 1.0.0.7 = October 10, 2015
+* Parent Plugin Class now checks for required plugins between page redirects to the plugin installer page.
+* Exit after wp_redirect in standard-install-functions page
 
 = 1.0.0.6 = October 8, 2015
 * Changed Template Preview image path to use plugins_url
