@@ -94,6 +94,7 @@ if (!class_exists('MP_CORE_Licensed_Parent_Plugin_Installation_Routine')){
 													
 			//Set up hooked functions
 			add_action( 'admin_init', array( $this, 'license_capture_upon_activation' ) );
+			add_action( 'admin_init', array( $this, 'mp_parent_plugin_checking_active_plugins' ) );
 			add_action( 'admin_footer', array( $this, 'footer_redirects_after_dependant_installs' ) );
 			add_action( 'shutdown', array( $this, 'redirect_upon_activation' ) );
 											
@@ -433,6 +434,58 @@ if (!class_exists('MP_CORE_Licensed_Parent_Plugin_Installation_Routine')){
 		}
 		
 		/**
+		 * This is sort of "in-between" function. It is redirected to solely to check if any plugins need to be installed by the parent plugin. 
+		 * If they don't, it redirect directly to admin. If they do need to be installed still, it redirects to the installation page.
+		 *
+		 * @since 1.0
+		 * @global $mp_core_options
+		 * @return void
+		 */
+		function mp_parent_plugin_checking_active_plugins(){
+			
+			global $mp_core_options;
+			
+			if ( !isset( $_GET['mp_parent_plugin_checking_active_plugins'] ) ){
+				return false;	
+			}
+			
+			//See if we have a value for the number of times this installation has been attempted.
+			$mp_installation_attempts = isset( $_SESSION['mp_installation_attempts'] ) ? $_SESSION['mp_installation_attempts'] : NULL;
+			
+			//Set up the name of the function in the parent plugin where we check if all dependant plugins are installed
+			$dependency_function_name = $this->_full_parent_plugin_underscore_slug . '_dependencies';
+													
+			//If all required plugins are active, redirect to the welcome page
+			if ( !$dependency_function_name() ){
+					
+				//If we should be checking the active plugins on this new page load
+				wp_redirect( admin_url( sprintf( 'options-general.php?' . $mp_installation_attempts . '&page=mp_core_install_plugins_page&action=install-plugin&_wpnonce=%s', wp_create_nonce( 'install-plugin' ) ) ) );	
+				exit;
+			}
+			else{
+				
+				$_SESSION['mp_installation_attempts'] = 0;
+							
+				//Flush the rewrite rules
+				flush_rewrite_rules();
+				
+				//Tell the mp_core_options that we no longer just activated
+				$mp_core_options['parent_plugin_activation_status'] = 'complete';	
+					
+				//Save our mp_core_options - since we've just activated and changed some of them
+				update_option( 'mp_core_options', apply_filters( 'mp_core_parent_plugin_installation_complete_filter', $mp_core_options, $this->_full_parent_plugin_underscore_slug ) );
+				
+				//This hook can be used to set up default meta options or Theme Settings etc
+				do_action( 'mp_core_parent_plugin_installation_complete', $this->_full_parent_plugin_underscore_slug );
+				
+				//If all plugins are active that should be, redirect to the admin dashboard.
+				wp_redirect( admin_url() . '?the_parent_plugin_welcome' );	
+				exit;
+			}
+	
+		}
+		
+		/**
 		 * This function fires in the footer to set redirects after installations of dependencies
 		 *
 		 * @since 1.0
@@ -451,7 +504,7 @@ if (!class_exists('MP_CORE_Licensed_Parent_Plugin_Installation_Routine')){
 				$dependency_function_name = $this->_full_parent_plugin_underscore_slug . '_dependencies';
 														
 				//If all required plugins are active, redirect to the welcome page
-				if ( $dependency_function_name() || $_SESSION['mp_installation_attempts'] >= 5){
+				if ( $dependency_function_name() || $_SESSION['mp_installation_attempts'] >= 5 ){
 					
 					$_SESSION['mp_installation_attempts'] = 0;
 							
@@ -476,11 +529,14 @@ if (!class_exists('MP_CORE_Licensed_Parent_Plugin_Installation_Routine')){
 				else{
 					
 					$_SESSION['mp_installation_attempts'] = $_SESSION['mp_installation_attempts'] + 1;
-									
-					echo '<script type="text/javascript">';
-						echo "window.location = '" . admin_url( sprintf( 'options-general.php?' . $_SESSION['mp_installation_attempts'] . '&page=mp_core_install_plugins_page&action=install-plugin&_wpnonce=%s', wp_create_nonce( 'install-plugin' ) ) ) . "';";
-					echo '</script>';
 					
+					//NOTICE: If plugins were installed on this page, they need to be rechecked for whether they are active before we redirect the user to another installation page
+					//This is because all required plugins COULD be active now - and we just don't know it because those newly active plugins are only actually "active" on the next page load.	
+					//Therefore, we will redirect the user to a page dedicated to checking for plugins and redirecting accordingly. 
+					//This will be achieved by using the 'mp_parent_plugin_checking_active_plugins' URL variable.
+					echo '<script type="text/javascript">';
+						echo "window.location = '" . esc_url( add_query_arg( array( 'mp_parent_plugin_checking_active_plugins' => true ), admin_url() ) ) . "';";
+					echo '</script>';					
 					
 				}
 				
